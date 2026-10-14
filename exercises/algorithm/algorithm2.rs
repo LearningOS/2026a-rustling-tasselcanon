@@ -76,7 +76,6 @@ impl<T> LinkedList<T> {
             return;
         }
         let old_head = self.start;
-        self.end = Some(tail);
         let mut curr = self.start.take();
         let mut prev: Option<NonNull<Node<T>>> = None;
         while let Some(node) = curr {
